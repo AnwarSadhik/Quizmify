@@ -18,7 +18,7 @@ export default async function Home() {
 
   return (
     <main className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-      <Card className="w-[300px] md:w-[360px]">
+      <Card className="w-[330px] md:w-[360px]">
         <CardHeader>
           <CardTitle>Welcome to Quizmify!</CardTitle>
           <CardDescription>

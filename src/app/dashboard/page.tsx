@@ -1,9 +1,41 @@
-import React from 'react'
+import { getAuthSession } from "@/lib/nextauth";
+import { redirect } from "next/navigation";
+import React from "react";
+import QuizMeCard from "@/components/dashboard/QuizMeCard";
+import HistoryCard from "@/components/dashboard/HistoryCard";
+import HotTopics from "@/components/dashboard/HotTopics";
+import RecentActivites from "@/components/dashboard/RecentActivites";
 
-type Props = {}
+type Props = {};
 
-export default function page({}: Props) {
+export const metadata = {
+  title: "Dashboard | Quizmify",
+};
+
+export default async function page({}: Props) {
+  const session = await getAuthSession();
+  if (!session?.user) {
+    redirect("/");
+  }
+
   return (
-    <div className='py-10'>Dashboard</div>
-  )
+    <main className="p-8 mx-auto max-w-7xl">
+      <div className="flex items-center">
+        <h2 className="mr-2 text-3xl font-semibold tracking-tight">
+          Dashboard
+        </h2>
+        </div>
+
+        <div className="grid gap-4 mt-4 md:grid-cols-2">
+          <QuizMeCard />
+          <HistoryCard />
+        </div>
+        
+        <div className="grid gap-4 mt-4 md:grid-cols-2 lg:grid-cols-7 ">
+          <HotTopics />
+          <RecentActivites />
+        </div>
+
+    </main>
+  );
 }

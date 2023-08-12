@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Providers from "@/components/Providers";
+import { Toaster } from "@/components/ui/toaster";
 
 const worksans = Work_Sans({ subsets: ["latin"] });
 
@@ -20,13 +21,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={cn(worksans.className, 
-          `antialiased min-h-screen py-10`
-          )}
+        className={cn(worksans.className, `antialiased min-h-screen py-10`)}
       >
         <Providers>
           <Navbar />
           {children}
+          <Toaster />
         </Providers>
       </body>
     </html>
