@@ -21,7 +21,7 @@ export default async function Home() {
     <main className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
       <Card className="w-[330px] md:w-[360px]">
         <CardHeader>
-          <CardTitle>Welcome to Quizmify!</CardTitle>
+          <CardTitle>Welcome to Quizzemfy!</CardTitle>
           <CardDescription>
             Quizzmefy is a simple quiz application that allows you to create and
             share quizz with your friends.
