@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { getAuthSession } from "@/lib/nextauth";
+import { LogIn, LogInIcon } from "lucide-react";
 import { redirect } from "next/navigation";
 
 export default async function Home() {
@@ -28,7 +29,10 @@ export default async function Home() {
         </CardHeader>
         <CardContent>
           <AuthBtn>
+            <div className="flex items-center flex-row gap-x-2">
+            <LogInIcon />
             SignIn with Google
+            </div>
           </AuthBtn>
         </CardContent>
       </Card>

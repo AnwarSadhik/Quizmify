@@ -24,7 +24,7 @@ const Navbar = async ({}: Props) => {
             {session?.user ? (
               <UserAccountNav user={session.user} />
             ) : (
-              <AuthBtn>SignIn</AuthBtn>
+              <AuthBtn>LET ME IN</AuthBtn>
             )}
           </div>
         </div>
