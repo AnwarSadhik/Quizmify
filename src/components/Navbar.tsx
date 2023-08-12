@@ -4,6 +4,7 @@ import Link from "next/link";
 import AuthBtn from "./AuthBtn";
 import UserAccountNav from "./userAccountNav";
 import { ThemeToggle } from "./themeToggle";
+import { LogInIcon } from "lucide-react";
 
 type Props = {};
 
@@ -15,7 +16,7 @@ const Navbar = async ({}: Props) => {
       <div className="flex items-center justify-between h-full gap-2 px-8 mx-auto max-w-7xl">
         <Link href="/" className="flex items-center gap-2">
           <p className="rounded-lg border-2 border-b-4 border-r-4 border-black px-2 py-1 text-xl font-bold transition-all hover:translate-y-[2px] md:block dark:border-white">
-            Quizmify
+            Quizzmefy
           </p>
         </Link>
         <div className="flex items-center">
@@ -24,7 +25,13 @@ const Navbar = async ({}: Props) => {
             {session?.user ? (
               <UserAccountNav user={session.user} />
             ) : (
-              <AuthBtn>LET ME IN</AuthBtn>
+              // <AuthBtn>
+              //   <div className="flex items-center gap-x-2">
+              //   <LogInIcon />
+              //   SignIn
+              //   </div>
+              // </AuthBtn>
+              ""
             )}
           </div>
         </div>

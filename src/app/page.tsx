@@ -23,7 +23,7 @@ export default async function Home() {
         <CardHeader>
           <CardTitle>Welcome to Quizmify!</CardTitle>
           <CardDescription>
-            Quizmify is a simple quiz application that allows you to create and
+            Quizzmefy is a simple quiz application that allows you to create and
             share quizz with your friends.
           </CardDescription>
         </CardHeader>
